@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangxy.mybatisdemo.mapper.PersonMapper">
+    <select id="getPersons" resultType="com.zhangxy.mybatisdemo.entity.Person">
+        select * from t_person where status='y'
+    </select>
+    <insert id="savePerson" parameterType="com.zhangxy.mybatisdemo.entity.Person">
+        insert into t_person (username,password,`type`) values (#{username},#{password},#{type})
+    </insert>
+
+</mapper>
