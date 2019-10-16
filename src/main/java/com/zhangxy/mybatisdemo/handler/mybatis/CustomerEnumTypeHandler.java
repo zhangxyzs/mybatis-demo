@@ -14,7 +14,7 @@ import org.apache.ibatis.type.MappedTypes;
  * @author zhangxy
  * @date 2019/10/16
  **/
-@MappedTypes(value = {PersonTypeEnum.class})
+@MappedTypes({PersonTypeEnum.class})
 public class CustomerEnumTypeHandler<E extends BaseEnum> extends BaseTypeHandler<E> {
 
     private Class<E> type;
